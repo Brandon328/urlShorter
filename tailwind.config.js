@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+import colors from 'tailwindcss/colors'
+
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/Components/**/*.{js,jsx}",
+    "./src/Pages/**/*.{js,jsx}",
   ],
   theme: {
     colors: {
@@ -18,6 +21,10 @@ export default {
         grayishviolet: '#9e9aa7',
         darkblue: '#35323e',
         darkviolet: '#232127'
+      },
+      white: {
+        50: colors.slate[50],
+        100: colors.gray[50]
       }
     },
     fontFamily: {
