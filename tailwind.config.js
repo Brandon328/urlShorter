@@ -23,8 +23,10 @@ export default {
         darkviolet: '#232127'
       },
       white: {
+        0: '#fff',
         50: colors.slate[50],
-        100: colors.gray[50]
+        100: colors.gray[50],
+        200: colors.gray[100]
       }
     },
     fontFamily: {
