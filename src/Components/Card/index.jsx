@@ -4,7 +4,10 @@ function Card({ src, title, description, className = "" }) {
   return (
     <div
       className={
-        "bg-white-0 rounded-md px-9 pb-10 text-center z-10 relative" +
+        `bg-white-0 rounded-md px-9 pb-10 
+        text-center z-10 relative md:m-0
+        md:text-start
+        ` +
         " " +
         className
       }
