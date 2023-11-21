@@ -21,16 +21,17 @@ function ShortenBox() {
         sm:py-3
         "
       />
-      <button
-        className="w-full bg-primary-cyan 
-      text-white-50 text-center p-4
-        font-bold tracking-wider
-        rounded-lg z-10 sm:rounded-lg
-        sm:py-3
-      "
-      >
-        Shorten it!
-      </button>
+      <p className="bg-white-0 z-10 rounded-lg">
+        <button
+          className="w-full bg-primary-cyan 
+        text-white-50 text-center p-4
+          font-bold tracking-wider
+          sm:py-3 hover:opacity-60 rounded-lg
+        "
+        >
+          Shorten it!
+        </button>
+      </p>
     </div>
   );
 }

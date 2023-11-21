@@ -9,7 +9,7 @@ function MenuList({ title, items, className = "" }) {
       space-y-3"
       >
         {items.map((item, index) => (
-          <p key={index}>
+          <p key={index} className="hover:text-primary-cyan">
             <a href={item.url}>{item.title}</a>
           </p>
         ))}
@@ -17,7 +17,7 @@ function MenuList({ title, items, className = "" }) {
     </div>
   );
 }
-MenuList.protoTypes = {
+MenuList.propTypes = {
   title: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
   className: PropTypes.string,

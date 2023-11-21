@@ -18,6 +18,7 @@ import NavBarMenu from "../../Components/NavBarMenu";
 // import LinksBox from "../../Components/LinksBox";
 import Card from "../../Components/Card";
 import MenuList from "../../Components/MenuList";
+// import React from "react";
 
 function App() {
   const featuresItems = [
@@ -66,6 +67,10 @@ function App() {
       url: "https://www.frontendmentor.io/challenges",
     },
   ];
+  function toggleShowNavBar() {
+    const nav = document.querySelector("#navMenu");
+    nav.classList.toggle("hidden");
+  }
 
   return (
     <>
@@ -82,8 +87,9 @@ function App() {
         "
         >
           <img src={logo} alt="logo" />
-          <NavBarMenu></NavBarMenu>
+          <NavBarMenu className="hidden lg:block"></NavBarMenu>
           <RxHamburgerMenu
+            onClick={toggleShowNavBar}
             className="text-[30px] 
           text-neutral-grayishviolet lg:hidden"
           />
@@ -188,7 +194,13 @@ function App() {
         <h2 className="text-2xl font-bold mb-5 z-10 relative">
           Boost your links today
         </h2>
-        <GetStartBtn className="z-10 relative"></GetStartBtn>
+        <p
+          className="bg-white-0 
+        w-fit inline-block rounded-full
+        "
+        >
+          <GetStartBtn className="z-10 relative"></GetStartBtn>
+        </p>
         <img
           className="absolute top-0 right-0 w-full h-full"
           src={boostBg}
@@ -223,16 +235,28 @@ function App() {
         2xl:space-x-8 2xl:col-span-1
         "
         >
-          <a href="https://www.facebook.com/">
+          <a
+            href="https://www.facebook.com/"
+            className="hover:text-primary-cyan"
+          >
             <RiFacebookBoxFill />
           </a>
-          <a href="https://twitter.com/home">
+          <a
+            href="https://twitter.com/home"
+            className="hover:text-primary-cyan"
+          >
             <RiTwitterXFill />
           </a>
-          <a href="https://www.pinterest.com/">
+          <a
+            href="https://www.pinterest.com/"
+            className="hover:text-primary-cyan"
+          >
             <FaPinterestP />
           </a>
-          <a href="https://www.instagram.com/">
+          <a
+            href="https://www.instagram.com/"
+            className="hover:text-primary-cyan"
+          >
             <FaInstagram />
           </a>
         </div>

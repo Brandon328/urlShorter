@@ -5,7 +5,9 @@ function GetStartedBtn({ className = "" }) {
     <button
       className={`
         bg-primary-cyan text-white-50 px-8 py-3
-        rounded-full font-bold tracking-wider ${className}`}
+        rounded-full font-bold tracking-wider 
+        hover:opacity-60
+        ${className}`}
     >
       Get Started
     </button>
